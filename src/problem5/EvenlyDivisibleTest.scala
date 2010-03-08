@@ -6,6 +6,12 @@ class EvenlyDivisibleTest {
   val ed:EvenlyDivisible = new EvenlyDivisible
 
   @Test
+  def shouldSolveEulerProblem5() {
+    val runningLCM = (1 to 20).reduceLeft((x, y) => ed.lcm(x.toLong,y.toLong).toInt)
+    println("Smallest is " + runningLCM)
+  }
+
+  @Test
   def shouldReturnLCM() {
     Assert.assertEquals(4, ed.lcm(2, 4))
     Assert.assertEquals(12, ed.lcm(6,4))
