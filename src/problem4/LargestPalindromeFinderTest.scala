@@ -6,6 +6,11 @@ class LargestPalindromeFinderTest {
   val lpf:LargestPalindromeFinder = new LargestPalindromeFinder
 
   @Test
+  def shouldSolveEulerProblem4() {
+    Assert.assertEquals(906609, lpf.findLargestPalindrome)
+  }
+
+  @Test
   def shouldReverseAString() {
     Assert.assertEquals("EDCBA", "ABCDE".reverse.toString)
   }
