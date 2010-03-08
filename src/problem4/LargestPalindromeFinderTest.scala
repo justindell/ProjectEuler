@@ -7,7 +7,7 @@ class LargestPalindromeFinderTest {
 
   @Test
   def shouldSolveEulerProblem4() {
-    Assert.assertEquals(906609, lpf.findLargestPalindrome)
+    Assert.assertEquals("906609", lpf.findLargestPalindrome)
   }
 
   @Test
