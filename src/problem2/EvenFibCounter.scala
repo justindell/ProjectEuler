@@ -1,6 +1,7 @@
 package problem2
 
 object EvenFibCounter {
+  
   def main(args: Array[String]) {
     var fibNumbers = List[Int](1, 0)
 
