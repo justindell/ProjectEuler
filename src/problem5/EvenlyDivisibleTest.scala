@@ -7,8 +7,7 @@ class EvenlyDivisibleTest {
 
   @Test
   def shouldSolveEulerProblem5() {
-    val runningLCM = (1 to 20).reduceLeft((x, y) => ed.lcm(x.toLong,y.toLong).toInt)
-    println("Smallest is " + runningLCM)
+    Assert.assertEquals(232792560, ed.smallestEvenlyDivisible(20))
   }
 
   @Test
