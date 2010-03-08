@@ -1,15 +1,6 @@
 package problem3
 
-object PrimeFactorizer {
-  def main(args: Array[String]) {
-    val bigNumber: Long = 600851475143L
-
-    var divisor = bigNumber
-    while (!isPrime(divisor))
-    divisor /= smallestFactor(divisor)
-
-    println("Largest Prime Factor: " + divisor)
-  }
+class PrimeFactorizer {
 
   def sqrtFromDouble(x: Double) = Math.sqrt(x).toInt
 

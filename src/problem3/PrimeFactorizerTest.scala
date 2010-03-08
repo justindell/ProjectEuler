@@ -6,6 +6,17 @@ class PrimeFactorizerTest {
   val pf:PrimeFactorizer = new PrimeFactorizer
 
   @Test
+  def shouldSolveEulerProblem3() {
+    val bigNumber: Long = 600851475143L
+
+    var divisor = bigNumber
+    while (!pf.isPrime(divisor))
+    divisor /= pf.smallestFactor(divisor)
+
+    println("Largest Prime Factor: " + divisor)
+  }
+
+  @Test
   def shouldEvaluate23AsPrime() {
     Assert.assertEquals("23 not evaluated to be prime", true, pf.isPrime(23))
   }
