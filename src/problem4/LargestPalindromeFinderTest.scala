@@ -9,4 +9,11 @@ class LargestPalindromeFinderTest {
   def shouldReverseAString() {
     Assert.assertEquals("EDCBA", "ABCDE".reverse.toString)
   }
+
+  @Test
+  def shouldDetectAPalindrome() {
+    Assert.assertEquals(true, lpf.isPalindrome("123321"))
+    Assert.assertEquals(true, lpf.isPalindrome("12321"))
+    Assert.assertEquals(false, lpf.isPalindrome("123421"))
+  }
 }

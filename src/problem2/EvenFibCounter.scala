@@ -2,14 +2,12 @@ package problem2
 
 object EvenFibCounter {
   def main(args: Array[String]) {
-    var sum = 0
     var fibNumbers = List[Int](1, 0)
 
-    while (fibNumbers(0) < 4000000) {
+    while (fibNumbers(0) < 4000000)
       fibNumbers = fibNumbers(0) + fibNumbers(1) :: fibNumbers
-      if (fibNumbers(0) % 2 == 0 && fibNumbers(0) < 4000000)
-        sum += fibNumbers(0)
-    }
+
+    val sum = fibNumbers.filter(_%2==0).reduceLeft(_+_)
 
     println("Sum is: " + sum)
   }

@@ -1,19 +1,18 @@
 package problem3
 
-import scala.collection.immutable.TreeSet
-
-class PrimeFactorizer {
-  val sqrtFromDouble = (x: Double) => Math.sqrt(x.toDouble).toInt
+object PrimeFactorizer {
   def main(args: Array[String]) {
     val bigNumber: Long = 600851475143L
 
     var divisor = bigNumber
     while (!isPrime(divisor))
-      divisor /= smallestFactor(divisor)
+    divisor /= smallestFactor(divisor)
 
     println("Largest Prime Factor: " + divisor)
-}
-  
+  }
+
+  def sqrtFromDouble(x: Double) = Math.sqrt(x).toInt
+
   // The smallest factor must be a prime number
   def smallestFactor(x: Long): Long = {
     for (small <- 2 to sqrtFromDouble(x) if (x % small == 0))

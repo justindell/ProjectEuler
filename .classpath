@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" kind="lib" path="/Developer/workspace/ProjectEuler/bin"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="ch.epfl.lamp.sdt.launching.SCALA_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Developer/Library/Frameworks/JUnit/junit-4.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
