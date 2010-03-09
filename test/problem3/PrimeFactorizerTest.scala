@@ -3,18 +3,13 @@ package problem3
 import org.junit._
 
 class PrimeFactorizerTest {
-  val pf:PrimeFactorizer = new PrimeFactorizer
-  val pfj:PrimeFactorizerJava = new PrimeFactorizerJava
+  val pf: PrimeFactorizer = new PrimeFactorizer
+  val pfj: PrimeFactorizerJava = new PrimeFactorizerJava
 
   @Test
   def shouldSolveEulerProblem3() {
-    val bigNumber: Long = 600851475143L
-
-    var divisor = bigNumber
-    while (!pf.isPrime(divisor))
-      divisor /= pf.smallestFactor(divisor)
-
-    println("Largest Prime Factor: " + divisor)
+    Assert.assertEquals(6857, pfj.findLargestPrimeFactor(600851475143L))
+    Assert.assertEquals(6857, pf.findLargestPrimeFactor(600851475143L))
   }
 
   @Test

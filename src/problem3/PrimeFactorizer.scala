@@ -1,6 +1,14 @@
 package problem3
 
 class PrimeFactorizer {
+  def findLargestPrimeFactor(bigNumber: Long): Int = {
+    var divisor = bigNumber
+
+    while (!isPrime(divisor))
+      divisor /= smallestFactor(divisor)
+
+    return divisor.toInt
+  }
 
   def sqrtFromDouble(x: Double) = Math.sqrt(x).toInt
 

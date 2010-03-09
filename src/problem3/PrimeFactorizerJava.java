@@ -2,8 +2,17 @@ package problem3;
 
 public class PrimeFactorizerJava {
 
+    public int findLargestPrimeFactor(long bigNumber) {
+        long divisor = bigNumber;
+
+        while (!isPrime(divisor))
+            divisor /= smallestFactor(divisor);
+
+        return (int) divisor;
+    }
+
     public int sqrtFromDouble(double x) {
-        return (int)Math.sqrt(x);
+        return (int) Math.sqrt(x);
     }
 
     // The smallest factor must be a prime number
@@ -17,5 +26,5 @@ public class PrimeFactorizerJava {
         for (int i = 2; i < sqrtFromDouble(candidate) + 1; i++)
             if (candidate % i == 0) return false;
         return true;
-  }
+    }
 }
