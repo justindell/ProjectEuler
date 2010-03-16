@@ -13,8 +13,7 @@ object SquareSummer {
     }
 
     def squareOfSums(): Long = {
-        val sum = (1 to 100).reduceLeft(_+_)
-        return square(sum)
+        return square((1 to 100).reduceLeft(_+_))
     }
 
     def main(args: Array[String]) {
