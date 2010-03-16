@@ -16,11 +16,6 @@ class LargestPalindromeFinder {
   }
 
   def isPalindrome(palindrome: String): Boolean = {
-    var firsthalf = palindrome.substring(0, palindrome.length/2)
-    if (palindrome.length % 2 != 0) {
-      firsthalf = palindrome.substring(0, palindrome.length/2 + 1)
-    }
-    val secondhalf = palindrome.substring(palindrome.length/2, palindrome.length)
-    return firsthalf == secondhalf.reverse.toString
+    return palindrome == palindrome.reverse.toString
   }
 }

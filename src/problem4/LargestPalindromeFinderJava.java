@@ -16,12 +16,7 @@ public class LargestPalindromeFinderJava {
     }
 
     public boolean isPalindrome(String palindrome) {
-        String firsthalf = palindrome.substring(0, palindrome.length()/2);
-        if(palindrome.length() % 2 != 0) {
-            firsthalf = palindrome.substring(0, palindrome.length()/2 + 1);
-        }
-        String secondhalf = palindrome.substring(palindrome.length()/2, palindrome.length());
-        String test = new StringBuffer(secondhalf).reverse().toString();
-        return firsthalf.equals(test);
+        String test = new StringBuffer(palindrome).reverse().toString();
+        return palindrome.equals(test);
     }
 }
