@@ -1,10 +1,3 @@
 require 'mathn.rb'
 
-sum = 0
-Prime.each() { |prime|
-  if (prime > 2000000)
-    puts "Sum is: " + sum.to_s
-    exit
-  end
-  sum += prime
-}
+puts "Sum is: " + Prime.take_while {|prime| prime < 2000000}.inject { |sum, n| sum + n}.to_s
