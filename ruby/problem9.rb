@@ -1,4 +1,4 @@
-(1..1000).each { |a|
+1000.times { |a|
   aSquared = a**2  # So we dont calculate it over and over
   (1..a).each { |b|
     c = 1000 - a - b
