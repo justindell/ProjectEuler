@@ -29,10 +29,10 @@ end
 max = 0
 (0..19).each { |row|
   (0..19).each { |col|
-    horiz = [grid(row,col),grid(row,col+1),grid(row,col+2),grid(row,col+3)].inject{|prod, n| prod * n}
-    vert = [grid(row,col),grid(row+1,col),grid(row+2,col),grid(row+3,col)].inject{|prod, n| prod * n}
-    right_diag = [grid(row,col),grid(row+1,col+1),grid(row+2,col+2),grid(row+3,col+3)].inject{|prod,n| prod * n}
-    left_diag = [grid(row,col),grid(row+1,col-1),grid(row+2,col-2),grid(row+3,col-3)].inject{|prod,n| prod * n}
+    horiz = (0..3).collect{|i| grid(row,col+i)}.inject{|prod,n| prod * n}
+    vert = (0..3).collect{|i| grid(row+i,col)}.inject{|prod, n| prod * n}
+    right_diag = (0..3).collect{|i| grid(row+i,col+i)}.inject{|prod,n| prod * n}
+    left_diag = (0..3).collect{|i| grid(row+i,col-i)}.inject{|prod,n| prod * n}
     max = [horiz, vert, right_diag, left_diag, max].max
   }
 }
