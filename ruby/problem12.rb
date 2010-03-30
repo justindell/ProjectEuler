@@ -1,4 +1,4 @@
-require 'mathn.rb'
+require 'prime.rb'
 
 #If you factor a number into its prime power factors, then the total
 #number of factors is found by adding one to all the exponents and
