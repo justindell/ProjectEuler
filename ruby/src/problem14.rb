@@ -1,34 +1,21 @@
 $num_items = [0]
 
 def get_num_items(num) 
-  if num == 1
-    return 1
-  end
-  if $num_items[num]
-    return 1 + $num_items[num]
-  end
-  if num % 2 == 0
-    return 1 + get_num_items(num / 2)
-  else
-    return 1 + get_num_items(3 * num + 1)
-  end
+  return 1 if num == 1
+  return 1 + $num_items[num] if $num_items[num]
+  return 1 + get_num_items(num / 2) if num % 2 == 0
+  return 1 + get_num_items(3 * num + 1)
 end
 
-best = 0
+best_length = 0
 best_candidate = 0
 (1..1000000).each { |cand|
   items = get_num_items(cand)
   $num_items << items
-  if (items > best)
-    best = items
+  if (items > best_length)
+    best_length = items
     best_candidate = cand
   end
 }
 
-#j = 0
-#$num_items.each{ |i| 
-#  puts j.to_s +  ": " + i.to_s
-#  j += 1
-#}
-
-puts best_candidate.to_s + " at " + best.to_s
+puts best_candidate
