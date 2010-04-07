@@ -25,10 +25,4 @@ best_candidate = 0
   end
 }
 
-#j = 0
-#$num_items.each{ |i| 
-#  puts j.to_s +  ": " + i.to_s
-#  j += 1
-#}
-
 puts best_candidate.to_s + " at " + best.to_s
