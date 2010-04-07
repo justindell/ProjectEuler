@@ -9,7 +9,7 @@ next_triangle_number = 1
 (2..1000000).collect { |i| next_triangle_number += i }.each { |candidate|
   num_factors = Prime.prime_division(candidate).collect{|arr| arr[1]+1 }.inject{|sum,n| sum * n}
   if (num_factors > 500)
-    puts "Triangle number is: " + candidate.to_s
+    puts "Triangle number is: #{candidate}"
     break
   end
 }

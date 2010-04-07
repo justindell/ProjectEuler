@@ -35,5 +35,5 @@ max = 0
   }
 }
 
-puts "Max product: " + max.to_s
+puts "Max product: #{max}"
 
