@@ -1,6 +1,4 @@
-package problem3;
-
-public class PrimeFactorizerJava {
+public class Problem3 {
 
     public int findLargestPrimeFactor(long bigNumber) {
         long divisor = bigNumber;

@@ -1,6 +1,4 @@
-package problem4;
-
-public class LargestPalindromeFinderJava {
+public class Problem4 {
 
     public String findLargestPalindrome() {
         Integer largest = 0;

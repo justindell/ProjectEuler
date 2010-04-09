@@ -1,7 +1,8 @@
-build/*
-nbproject/*
+*/build/*
+*/nbproject/*
 */.idea/*
 */out/*
+*/nbbuild.xml
+*/manifest.mf
+*/build.xml
 *.iml
-build.xml
-manifest.mf

@@ -1,8 +1,6 @@
-package problem9;
-
 import java.lang.Math;
 
-public class PythagoreanSum {
+public class Problem9 {
 
     public static void main(String args[]) {
         for (int a=1; a<1000; a++) {
