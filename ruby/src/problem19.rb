@@ -1,5 +1,7 @@
-puts `for ((y=1901;y<=2000;y++)); \
-        do for ((m=1;m<=12;m++)); \
-          do cal $m $y | head -3 | tail -1; \
-        done; \
-      done | grep 7 | wc -l`
+require 'date'
+
+numSundays = 0
+Date.parse("1 jan 1901").upto(Date.parse("31 dec 2000")) { |day|
+  numSundays += 1 if day.wday == 0 && day.mday == 1
+}
+puts numSundays
